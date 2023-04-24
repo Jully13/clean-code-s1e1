@@ -6,24 +6,24 @@ body {
   font-family: lato, sans-serif;
 }
 
-.head {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.head img {
+.header .header__image {
   width: 100%;
 }
 
-.head .header-link {
+.header .header__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
 
-  .head {
+  .header {
     text-align: center;
   }
 
@@ -41,7 +41,7 @@ body {
   flex-grow: 1;
 }
 
-.task-wrapper {
+.section__wrapper {
   display: flex;
 }
 
@@ -56,11 +56,11 @@ h3 {
 }
 
 input,
-button {
+.button {
   outline: none;
 }
 
-button {
+.button {
   background: none;
   border: 0px;
   color: #888;
@@ -70,7 +70,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button:hover {
   color: #3a3a3a;
 }
 
@@ -105,12 +105,12 @@ input[type="text"]:focus {
 
 /* New Task */
 
-label[for="new-task"] {
+label[for="new-task-input"] {
   display: block;
   margin: 0 0 20px;
 }
 
-input#new-task {
+input#new-task-input {
   width: 318px;
 }
 

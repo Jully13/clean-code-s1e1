@@ -6,30 +6,30 @@ body {
   font-family: lato, sans-serif;
 }
 
-.aaa {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.aaa img {
+.header__image {
   width: 100%;
 }
 
-.aaa .more_inf {
+.header__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
 
-  .aaa {
+  .header {
     text-align: center;
   }
 
 }
 
-.centered-main-page-element {
+.wrapper {
   display: block;
   width: 500px;
   margin: 0 auto 0;
@@ -39,28 +39,31 @@ body {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
+  vertical-align: middle;
 }
 
-.task-row-wrapper {
+.section__wrapper {
   display: flex;
 }
 
-ul {
+.todo-list,
+.completed-list {
   margin: 0;
   padding: 0px;
 }
 
-li,
-h3 {
+.todo-list__item,
+.completed-list__item,
+.section__title {
   list-style: none;
 }
 
 input,
-button {
+.button {
   outline: none;
 }
 
-button {
+.button {
   background: none;
   border: 0px;
   color: #888;
@@ -68,16 +71,20 @@ button {
   width: 60px;
   font-family: lato, sans-serif;
   cursor: pointer;
+  vertical-align: middle;
 }
 
-button:hover {
+.button:hover {
   color: #3a3a3a;
+}
+
+.item-checkbox {
+  vertical-align: middle;
 }
 
 /* Heading */
 
-h3,
-label[for="new-task"] {
+.section__title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -106,28 +113,25 @@ input[type="text"]:focus {
 
 /* New Task */
 
-label[for="new-task"] {
-  display: block;
-  margin: 0 0 20px;
+#new-task-input {
+  width: 410px;
+  margin-top: 20px;
 }
 
-input#new-task {
-  width: 318px;
+.new-task__button {
+  margin-top: 20px;
 }
 
 /* Task list */
 
-li {
+.todo-list__item,
+.completed-list__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-li > * {
-  vertical-align: middle;
 }
 
 li > input[type="checkbox"] {
@@ -141,17 +145,18 @@ li > label {
   width: 226px;
 }
 
-li >    input[type="text"] {
+li > input[type="text"] {
   width: 226px;
 }
 
-button.delete img {
+.button-image {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
+  vertical-align: middle;
 }
 
-button.delete img:hover {
+.button-image:hover {
   transform: rotateZ(0);
 }
 
@@ -168,11 +173,11 @@ ul li input[type=text] {
   display: none;
 }
 
-ul li.editMode input[type=text] {
+ul li.edit-mode input[type=text] {
   display: inline-block;
   width: 224px;
 }
 
-ul li.editMode label {
+ul li.edit-mode label {
   display: none;
 }

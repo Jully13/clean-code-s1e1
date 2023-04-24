@@ -15,7 +15,7 @@
       <section class="section section__add-item">
         <h3 class="section__title">Add Item</h3>
         <div class="new-task">
-          <input id="new-task-input" class="task" type="text">
+          <input class="new-task__input" type="text">
           <button class="button new-task__button">Add</button>
         </div>
       </section>
@@ -23,18 +23,18 @@
         <h3 class="section__title">Todo</h3>
         <ul id="incomplete-tasks" class="todo-list">
           <li class="todo-list__item">
-            <input class="item-checkbox" type="checkbox">
-            <label class="task">Pay Bills</label>
-            <input class="task" type="text">
+            <input class="item__checkbox" type="checkbox">
+            <label class="item-label">Pay Bills</label>
+            <input class="item__input" type="text">
             <button class="button button-edit">Edit</button>
             <button class="button button-delete">
               <img class="button-image" src="./remove.svg" alt="Delete">
             </button>
           </li>
           <li class="todo-list__item edit-mode">
-            <input class="item-checkbox" type="checkbox">
-            <label class="task">Go Shopping</label>
-            <input class="task" type="text" value="Go Shopping">
+            <input class="item__checkbox" type="checkbox">
+            <label class="item-label edit-mode__label">Go Shopping</label>
+            <input class="item__input edit-mode__input" type="text" value="Go Shopping">
             <button class="button button-edit">Save</button>
             <button class="button button-delete">
               <img class="button-image" src="./remove.svg" alt="Delete">
@@ -46,9 +46,9 @@
         <h3 class="section__title">Completed</h3>
       <ul id="completed-tasks" class="completed-list">
         <li class="completed-list__item">
-          <input class="item-checkbox" type="checkbox" checked>
-          <label class="task">See the Doctor</label>
-          <input class="task" type="text">
+          <input class="item__checkbox" type="checkbox" checked>
+          <label class="item-label completed-list__label">See the Doctor</label>
+          <input class="item__input" type="text">
           <button class="button button-edit">Edit</button>
           <button class="button button-delete">
             <img class="button-image" src="./remove.svg" alt="Delete">

@@ -1,9 +1,12 @@
-/* Basic Style */
-
 body {
   background-color: #f8f8f8;
   color: #333;
   font-family: lato, sans-serif;
+}
+
+input,
+button {
+  outline: none;
 }
 
 .header {
@@ -35,7 +38,7 @@ body {
   margin: 0 auto 0;
 }
 
-.task {
+.item-label {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -58,11 +61,6 @@ body {
   list-style: none;
 }
 
-input,
-.button {
-  outline: none;
-}
-
 .button {
   background: none;
   border: 0px;
@@ -78,12 +76,6 @@ input,
   color: #3a3a3a;
 }
 
-.item-checkbox {
-  vertical-align: middle;
-}
-
-/* Heading */
-
 .section__title {
   color: #333;
   font-weight: 700;
@@ -94,7 +86,8 @@ input,
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.new-task__input,
+.item__input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -107,22 +100,22 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.new-task__input:focus,
+.item__input:focus {
   color: #333;
 }
 
-/* New Task */
+.new-task {
+  display: flex;
+  padding-top: 20px;
+}
 
-#new-task-input {
+.new-task__input {
+  display: inline-block;
+  flex-grow: 1;
+  vertical-align: middle;
   width: 410px;
-  margin-top: 20px;
 }
-
-.new-task__button {
-  margin-top: 20px;
-}
-
-/* Task list */
 
 .todo-list__item,
 .completed-list__item {
@@ -134,18 +127,20 @@ input[type="text"]:focus {
   align-items: center;
 }
 
-li > input[type="checkbox"] {
+.item__checkbox {
   margin: 0 10px;
+  vertical-align: middle;
 }
 
-li > label {
+.item-label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li > input[type="text"] {
+.new-task__input,
+.item__input {
   width: 226px;
 }
 
@@ -160,24 +155,20 @@ li > input[type="text"] {
   transform: rotateZ(0);
 }
 
-/* Completed */
-
-ul#completed-tasks label {
+.completed-list__label {
   text-decoration: line-through;
   color: #888;
 }
 
-/* Edit Task */
-
-ul li input[type=text] {
+.item__input {
   display: none;
 }
 
-ul li.edit-mode input[type=text] {
+.edit-mode__input {
   display: inline-block;
-  width: 224px;
+  width: 324px;
 }
 
-ul li.edit-mode label {
+.edit-mode__label {
   display: none;
 }

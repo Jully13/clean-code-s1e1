@@ -6,24 +6,24 @@ body {
   font-family: lato, sans-serif;
 }
 
-.head {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.head img {
+.header .header__image {
   width: 100%;
 }
 
-.head .header-link {
+.header .header__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
 
-  .head {
+  .header {
     text-align: center;
   }
 
